@@ -15,6 +15,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    //As slot is a function the visibility can be adjusted based
+    //on project needs: public, protected, private.
+public slots:
+    void addTask();
+
 private:
     Ui::MainWindow *ui;
 };
