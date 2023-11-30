@@ -4,7 +4,8 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),
+      mTasks()
 {
     ui->setupUi(this);
     /**
@@ -37,5 +38,8 @@ MainWindow::~MainWindow()
 void MainWindow::addTask()
 {
     qDebug() << "User clicked on the button";
+    Task* task = new Task("Untitled task");
+    mTasks.append(task);
+    ui->tasksLayout->addWidget(task);
 }
 

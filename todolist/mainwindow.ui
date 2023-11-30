@@ -14,26 +14,11 @@
    <string>Todo List</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>361</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="tasksLayout">
-     <property name="spacing">
-      <number>6</number>
-     </property>
-    </layout>
-   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
+      <x>21</x>
+      <y>11</y>
       <width>337</width>
       <height>27</height>
      </rect>
@@ -67,6 +52,17 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>44</y>
+      <width>361</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="tasksLayout"/>
    </widget>
   </widget>
  </widget>
