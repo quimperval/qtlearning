@@ -19,6 +19,14 @@ public:
     QString name() const;
     bool isCompleted() const;
 
+public slots:
+    void rename();
+
+//A signal is used only to notify another class (the receiver,
+//connected slot)
+signals:
+    void removed(Task* task);
+
 private:
     Ui::Task *ui;
 };
