@@ -21,11 +21,13 @@ public:
 
 public slots:
     void rename();
+    void checked(bool checked);
 
 //A signal is used only to notify another class (the receiver,
 //connected slot)
 signals:
     void removed(Task* task);
+    void statusChanged(Task* task);
 
 private:
     Ui::Task *ui;
