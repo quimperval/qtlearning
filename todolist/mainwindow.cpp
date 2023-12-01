@@ -1,4 +1,5 @@
 #include <QDebug>
+#include <QInputDialog>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -37,9 +38,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::addTask()
 {
-    qDebug() << "User clicked on the button";
-    Task* task = new Task("Untitled task");
-    mTasks.append(task);
-    ui->tasksLayout->addWidget(task);
+    bool ok;
+    QString name = QInputDialog::getText(this,
+                    tr("Add task"),
+                    tr("Task name"),
+                    QLineEdit::Normal,
+                    tr("Untitled task"),&ok);
+
+    if(ok && !name.isEmpty()){
+        qDebug() << "User clicked on the button";
+        qDebug() << "Task name: " << name << "\n";
+        Task* task = new Task(name);
+        mTasks.append(task);
+        ui->tasksLayout->addWidget(task);
+    }
 }
 

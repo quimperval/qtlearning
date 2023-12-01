@@ -6,6 +6,7 @@ Task::Task(const QString& name, QWidget *parent) :
     ui(new Ui::Task)
 {
     ui->setupUi(this);
+    setName(name);
 }
 
 Task::~Task()
