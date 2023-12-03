@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 CONFIG += c++14
 
@@ -9,13 +9,17 @@ TARGET = sysinfo
 TEMPLATE = app
 
 SOURCES += \
+    cpuwidget.cpp \
     main.cpp \
     MainWindow.cpp \
-    SysInfo.cpp
+    SysInfo.cpp \
+    sysinfowidget.cpp
 
 HEADERS += \
     MainWindow.h \
-    SysInfo.h
+    SysInfo.h \
+    cpuwidget.h \
+    sysinfowidget.h
 
 windows {
         SOURCES +=  SysInfoWindowsImpl.cpp
