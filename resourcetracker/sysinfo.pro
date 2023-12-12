@@ -26,6 +26,11 @@ windows {
         HEADERS +=  SysInfoWindowsImpl.h
 }
 
+linux {
+        SOURCES +=  SysInfoLinuxImpl.cpp
+        HEADERS +=  SysInfoLinuxImpl.h
+}
+
 FORMS += \
     MainWindow.ui
     
